@@ -240,7 +240,7 @@
       <div class="c hl"><div class="k">Typical Capacity</div><div class="v">5200<small>mAh</small></div></div>
       <div class="c hl"><div class="k">Rated Capacity</div><div class="v">4800<small>mAh</small></div></div>
       <div class="c hl"><div class="k">Rated energy</div><div class="v">69.12<small>Wh</small></div></div>
-      <div class="c wide"><div class="k">Batch number/serial number</div><div class="v mono" style="font-size:12.5px;font-weight:500">on the battery label QR code.eg.03020200000556 67D E 000001 S3B</div></div>
+      <div class="c wide"><div class="k">Batch number/serial number</div><div class="v mono" style="font-size:12.5px;font-weight:500"><span id="batch-info"></span></div></div>
       <div class="c wide"><div class="k">Object of the Declaration</div><div class="v" style="font-size:13px;font-weight:500;line-height:1.5">Rechargeable Lithium-ion Battery Pack model no. R2412-4S2P-LNYD<br>Used for sweeping machines</div></div>
     </div>
 
@@ -286,7 +286,7 @@
       <div class="row"><div class="k">Nominal voltage</div><div class="v">14.4V</div></div>
       <div class="row"><div class="k">Rated capacity</div><div class="v">4800mAh</div></div>
       <div class="row"><div class="k">Rated energy</div><div class="v">69.12Wh</div></div>
-      <div class="row"><div class="k">Batch number/serial</div><div class="v mono">03020200000556 67D E 0 00001 S3B</div></div>
+      <div class="row"><div class="k">Batch number/serial</div><div class="v mono"><span id="batch-doc"></span></div></div>
       <div class="row"><div class="k">Battery manufacturer</div><div class="v"><b>Shenzhen EPT Battery Co., Ltd.</b></div></div>
       <div class="row"><div class="k">Trademark</div><div class="v">EPT</div></div>
       <div class="row"><div class="k">Manufacturer's address</div><div class="v">Building3, Huan cheng Industrial Park, No, 41 Dalang north road, Dalang Street, Longhua District. Shenzhen City Guangdong Province, P.R.China</div></div>
@@ -367,6 +367,16 @@
 </div>
 
 <script>
+// Batch number/serial number: from URL query string, e.g. ?EPT2026378488919
+(function(){
+  var q = location.search.replace(/^\?/, '');
+  try { q = decodeURIComponent(q); } catch(e) {}
+  q = q.replace(/\+/g, ' ').trim();
+  ['batch-info', 'batch-doc'].forEach(function(id){
+    var el = document.getElementById(id);
+    if (el) el.textContent = q;
+  });
+})();
 (function(){
   var DOCS = [
     {p:1,  code:"INFO", nm:"General Information", nat:"Battery Information"},
