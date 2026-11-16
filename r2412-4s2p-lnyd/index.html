@@ -286,7 +286,7 @@
       <div class="row"><div class="k">Nominal voltage</div><div class="v">14.4V</div></div>
       <div class="row"><div class="k">Rated capacity</div><div class="v">4800mAh</div></div>
       <div class="row"><div class="k">Rated energy</div><div class="v">69.12Wh</div></div>
-      <div class="row"><div class="k">Batch number/serial</div><div class="v mono"><span id="batch-doc"></span></div></div>
+      <div class="row"><div class="k">Batch number/serial</div><div class="v mono">03020200000556 67D E 0 00001 S3B</div></div>
       <div class="row"><div class="k">Battery manufacturer</div><div class="v"><b>Shenzhen EPT Battery Co., Ltd.</b></div></div>
       <div class="row"><div class="k">Trademark</div><div class="v">EPT</div></div>
       <div class="row"><div class="k">Manufacturer's address</div><div class="v">Building3, Huan cheng Industrial Park, No, 41 Dalang north road, Dalang Street, Longhua District. Shenzhen City Guangdong Province, P.R.China</div></div>
@@ -372,10 +372,8 @@
   var q = location.search.replace(/^\?/, '');
   try { q = decodeURIComponent(q); } catch(e) {}
   q = q.replace(/\+/g, ' ').trim();
-  ['batch-info', 'batch-doc'].forEach(function(id){
-    var el = document.getElementById(id);
-    if (el) el.textContent = q;
-  });
+  var el = document.getElementById('batch-info');
+  if (el) el.textContent = q;
 })();
 (function(){
   var DOCS = [
