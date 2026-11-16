@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>产品合规文档索引</title>
+<title>Document Index</title>
 <style>
-  :root{--ink:#122a3f;--ink2:#41586e;--ink3:#748699;--line:#e3eaf1;--accent:#0d6d5b;--soft:#e6f4f0}
+  :root{--ink:#122a3f;--ink2:#41586e;--ink3:#78899a;--line:#e3eaf1;--accent:#0d6d5b;--soft:#e8f4f1}
   *{box-sizing:border-box}
-  body{margin:0;background:#f2f6f9;color:var(--ink);font-size:15px;line-height:1.65;
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:720px;margin:0 auto;padding:0 16px 40px}
-  header{background:linear-gradient(155deg,#0c2436,#123c4d 55%,#0d5a52);color:#fff;padding:30px 0 32px}
-  header .k{font-size:11px;letter-spacing:1.4px;color:#9fd8c9;font-weight:600;margin-bottom:8px}
-  header h1{margin:0;font-size:23px;font-weight:700;letter-spacing:-.2px}
-  header p{margin:8px 0 0;color:#c3d9d5;font-size:13px}
-  h2{font-size:13px;letter-spacing:1px;color:var(--ink3);text-transform:uppercase;margin:28px 0 12px}
-  .item{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--line);
-    border-radius:14px;padding:15px 16px;text-decoration:none;color:inherit;margin-bottom:10px;
+  body{margin:0;background:#f2f6f9;color:var(--ink);font-size:14.5px;line-height:1.62;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px 40px}
+  header{background:linear-gradient(155deg,#0c2436,#123c4d 55%,#0d5a52);color:#fff;padding:28px 0 30px}
+  header .k{font-size:10.5px;letter-spacing:1.5px;color:#9fd8c9;font-weight:700;margin-bottom:8px}
+  header h1{margin:0;font-size:22px;font-weight:700;letter-spacing:-.2px}
+  header p{margin:7px 0 0;color:#c3d9d5;font-size:12.5px}
+  h2{font-size:10.5px;letter-spacing:1.4px;color:var(--ink3);text-transform:uppercase;margin:26px 0 11px;font-weight:700}
+  .item{display:flex;gap:13px;align-items:center;background:#fff;border:1px solid var(--line);
+    border-radius:13px;padding:14px 15px;text-decoration:none;color:inherit;margin-bottom:10px;
     transition:border-color .15s,box-shadow .15s,transform .12s}
   .item:active{transform:scale(.99)}
   .item:hover{border-color:#bcd9d0;box-shadow:0 3px 12px rgba(13,109,91,.10)}
   .ico{flex:0 0 40px;height:40px;border-radius:11px;background:var(--soft);color:var(--accent);
-    display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;letter-spacing:.3px}
+    display:flex;align-items:center;justify-content:center;font-size:10.5px;font-weight:700;letter-spacing:.2px}
   .txt{flex:1;min-width:0}
-  .txt .t{font-size:14.5px;font-weight:600;line-height:1.4;word-break:break-word}
-  .txt .d{font-size:12px;color:var(--ink3);margin-top:2px}
+  .txt .t{font-size:14px;font-weight:600;line-height:1.4;word-break:break-word}
+  .txt .d{font-size:11.5px;color:var(--ink3);margin-top:2px;line-height:1.5}
   .arrow{flex:0 0 auto;color:#b6c6d3;font-size:18px}
-  footer{margin-top:26px;padding-top:16px;border-top:1px solid var(--line);font-size:11.5px;color:var(--ink3);line-height:1.7}
+  footer{margin-top:24px;padding-top:15px;border-top:1px solid var(--line);font-size:11px;color:var(--ink3);line-height:1.65}
 </style>
 </head>
 <body>
 <header>
   <div class="wrap">
     <div class="k">DOCUMENT INDEX</div>
-    <h1>产品合规文档索引</h1>
-    <p>扫码打开对应产品的欧盟合规说明页</p>
+    <h1>Product Compliance Documents</h1>
+    <p>Scan the QR code to open the compliance page of each product</p>
   </div>
 </header>
 <div class="wrap">
-  <h2>全部文档</h2>
+  <h2>All documents</h2>
   <div id="list"></div>
   <footer>
-    本索引由文档二维码生成流程维护，每次新增文档追加一条记录，不覆盖历史内容。
+    Maintained by the QR document publishing flow. New documents are appended as new sub-directories; existing documents are never overwritten.
   </footer>
 </div>
 <script>
@@ -49,8 +49,8 @@ var DOCS = [
   {
     dir: "r2412-4s2p-lnyd/",
     code: "R2412",
-    title: "R2412-4S2P-LNYD 欧盟电池合规信息",
-    desc: "可充电锂离子电池包 · 14.4V / 69.12Wh · EU 2023/1542 · 25 页原件"
+    title: "R2412-4S2P-LNYD — Battery Information & EU Declaration of Conformity",
+    desc: "Rechargeable Lithium-ion Battery Pack · 14.4V / 69.12Wh · 25 pages, 23 languages"
   }
 ];
 var list = document.getElementById('list');
